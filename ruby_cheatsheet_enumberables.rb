@@ -15,6 +15,7 @@ example_num_array.inject(0) {|initial, num| initial + num } # 31 Does something 
 
 example_num_array.inject(:*) # 1001 Can be a very powerful shorthand
 
+
 3. Enumberables That Finds Things
 example_text_hash.select {|key, value| key == "red" } # {"red"=>"the color of desire"} Returns elements where the block evaluates to true
 
