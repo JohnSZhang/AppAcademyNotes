@@ -3,6 +3,8 @@
 1. Create New
 example_array_texts = ['Sherlock', 'Watson', 'Moriarty']
 example_array_nums = Array.new
+Array.new(3, []) #[[],[],[]] But the 3 items each point to the same array,
+ # use Array.new(3) { [] } instead to create 3 separate ones. However, remember that floats, ints, nil, symbols
 
 2. Manipulate Array Elements Individually
 example_array_nums << 1 << 1 << 2 << 3 # [1, 1, 2, 3] Adds value to end of array
