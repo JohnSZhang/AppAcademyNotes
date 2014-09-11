@@ -19,6 +19,12 @@ example_num_array.inject(:*) # 1001 Can be a very powerful shorthand
 3. Enumberables That Finds Things
 example_text_hash.select {|key, value| key == "red" } # {"red"=>"the color of desire"} Returns elements where the block evaluates to true
 
+example_text_hash.reject # Opposite Of .select
+
+example_num_array.take(num) # Returns fisrt n item of the object as a new object. Has a take_while form that stops earlier than .select.
+
+example_num_array.drop(num) # Opposite of take, has a drop_while form that stops earlier than .reject
+
 example_num_array.count # 3 This is straightfoward
 
 4. Enumberables That Are Boolean 

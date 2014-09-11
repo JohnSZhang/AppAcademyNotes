@@ -39,6 +39,9 @@ example_array_nums.length # 4 It's got 4 items
 example_array_texts.join(", ") # "Sherlock, Watson, Moriarty" Joins with separator
 example_array_nums.shuffle #[1, 3, 1, 2] Does not mutate
 example_array_nums.sort #[1, 1, 2, 3] Does not mutate array
+example_array_num.drop(1) #[1, 2, 3] Drops first element from array and returns rest as a new array (does not mutate) closely related is the drop_while method which drops all elements while the condition is met, then stops (different from delete_if)
+example_array_num.take(2) #[1,1] Takes the first x element of the array and returns new array with those elements(no mutat) Closely related take_while takes until conidtion is no longer met. (different from .select which check every item)
+example_array.reject, example_array.sample # Reject is also a name for delete_if, opposite of sample in that one rejects if the block condition passed in the true and other samples if the block condition is true, both do not mutate unless using the ! version and returns a new array. 
 
 
 7. Search Array
