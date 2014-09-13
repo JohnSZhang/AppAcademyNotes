@@ -18,11 +18,11 @@
 
 2. Add Things To Git Repo
 
+- git add -A This Way Updates Removed Files As Well. 
+
 - git add . Add All Files In Current Repo And Children
 
 - git add file.txt Add One File To Be Tracked
-
-- git add . -A This Way Updates Removed Files As Well. 
 
 - git add '*.txt' Add Txt File Type To Git
 

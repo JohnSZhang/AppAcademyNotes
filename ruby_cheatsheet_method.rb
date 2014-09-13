@@ -33,3 +33,18 @@ end
 * Has A Descriptive Name (That Is Hopefully Short)
 
 * Is About < 10 Lines Long (Break Up Longer Methods For Readability)
+
+4. Special Methods
+
+* == Method Used To Check If Two Objects Have Same Value
+
+* eql? Method Used To Compare If Ones Hash Is Equal To Anothers Hash, So 3.0 .eql? 3 == False
+
+* equal? Method Does Identity/Pointer Comparison, Is Default Behavior For Object Class
+
+* === Used For Case Statements, Special Case Call For Pric Class
+
+
+
+
+ 
