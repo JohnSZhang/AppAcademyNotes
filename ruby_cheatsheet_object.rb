@@ -13,13 +13,27 @@
 
 * When Calling Class.new, The Class.initialize Function Is Called And Any Arguments Passed To New Is Passed To Initialize #Do not do too much with initialize, just use it to setup the bare basics of object
 
-3. To Checkout An Object
+#What is the right level of granularity? When to create people and when to use communities? Use The level where you want to make individual changes at. Ie if you want to change a person's hair color, dont model them under a community. 125 lines is also about a maximum amount to look at. 
+
+3. Inheritances
+
+* Inheritance Is A Way To Create Subclasses In Order To Reuse Code. 
+
+* trust_fund_kid < rich_grandparents Inheritence Uses The < Operator. # The Terms child class/subclass and parent class/superclass are interchangeable
+
+* trust_fund_kid {def spending_habits} Overrides The Grandparents Frugal Ways
+
+* super('Human') Is Keyword In Method Definition That Allows Child To Call Parent Class Method Implimentation, If No Arugment Is Called The New Methods Arguments Are Passed On. 
+
+#When to use subclasses? Usually when you have two subclasses that are substantially different from each other behaviorly. Use it to keep DRY. 
+
+4. To Checkout An Object
 p nil # nil p uses the #inspect function and returns the
       # "inner-working" of objects
 
 puts nil # "" puts uses the to_string function and returns just what you want people to see
 
-4. Object Instances
+5. Object Instances
 
 * Instance.method Are Called With . Followed By Name Of Method
 
@@ -36,7 +50,7 @@ puts nil # "" puts uses the to_string function and returns just what you want pe
 * Use def self.class_method To Define Class Methods # Similiarly use self.class_method_name to call one class method inside another
 
 
-4. Useful Object Methods
+6. Useful Object Methods
 
 "".nil? # False An empty string is still a string, only nil can be truly nil
 
@@ -48,7 +62,7 @@ puts nil # "" puts uses the to_string function and returns just what you want pe
 
 4 <=> 5 # -1 Spaceships are intelligent and orders things for you
 
-5. Privacy Of Methods
+7. Privacy Of Methods
 
 * Public # Methods that can be called by anyone who wish to, is deafult
 
@@ -56,4 +70,4 @@ puts nil # "" puts uses the to_string function and returns just what you want pe
 
 * Protected # Can be called by explicit receiver, as long as explicit receiver is of same class or is a subclass
 
-# The use of public/private/protected is to better represent your code and logically tell reader which methods are used outside of class (Ie how the interface of the class look like)
+# The use of public/private/protected is to better represent your code and logically tell reader which methods are used outside of class (Ie how the interface of the class look like). Keep class interaction with outside world as minimal as possible. 
