@@ -49,6 +49,8 @@
 
 * "Command + f" Find Window "Shift + Command + f" Find In Project
 
+* "Command + Shift + f" Find Symbols
+
 6. Completion And Shortcuts 
 
 * "Escape" For Auto-Completetion # Press again to cycle through, via proximity 
@@ -64,6 +66,8 @@
 * "Shift + Control + ." Create ERB Tag
 
 * "Shift + Control + ," Create Html Tags (AutoCompletes, Default With P)
+
+* "Shift + Enter" Create New Method #userful
 
 7. Working With Macros
 
