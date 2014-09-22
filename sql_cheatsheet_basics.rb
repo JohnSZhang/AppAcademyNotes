@@ -41,3 +41,9 @@
 * Subqueries Shuld Be Parenthesized And Indented Two Extra Spaces To Create Nice Nested Structure. Joins On Statement Go Right After Join On Same Line. 
 
 6. Rails Flavored Sql 
+
+* Use Snake_Case Pluralized Table Names #This is how rails generate tables by default and is useful for us. 
+
+* Use "id" For Table Primary Keys. 
+
+* Use "foreign_table_name.id" As The Foregien Key Column On Your Tables. #Also makes rails life much easier.
