@@ -40,4 +40,4 @@
 
 * Subqueries Shuld Be Parenthesized And Indented Two Extra Spaces To Create Nice Nested Structure. Joins On Statement Go Right After Join On Same Line. 
 
-
+6. Rails Flavored Sql 
