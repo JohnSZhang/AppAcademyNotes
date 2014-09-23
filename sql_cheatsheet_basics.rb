@@ -47,3 +47,15 @@
 * Use "id" For Table Primary Keys. 
 
 * Use "foreign_table_name.id" As The Foregien Key Column On Your Tables. #Also makes rails life much easier.
+
+* Use <<-SQL (This Can Be Any Phase) 
+HERE ARE SOME COOL QUERIES
+SQL
+To Create A Multi-Line SQL Queries. 
+
+* To Interpolate Ruby Data With SQL Query Do : db.execute(<<-SQL, data_to_interpolate)
+Inserting Data ? 
+SQL
+The ? Allows For Inteerpolation Of Data 
+
+
