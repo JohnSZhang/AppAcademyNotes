@@ -21,6 +21,8 @@ And Each Will Have A :Up And A :Down Method For Upgrading/Downgrading A Specific
 
 * Supported Sexy Column Types Include :boolean, :date, :datetime, :float, :integer, :string, :text, :time
 
+* Keys Can Be Added Using The :foreign_key And :primary_key Options
+
 3. Changing Tables (For Lunch!)
 
 * :add_column, :remove_column, :rename_column Are Common Table Update Methods. They Follow The Syntax Of :action_name :table_name, :relevant_column_name, :other_params
