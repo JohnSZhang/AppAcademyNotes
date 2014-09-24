@@ -41,5 +41,6 @@ And Each Will Have A :Up And A :Down Method For Upgrading/Downgrading A Specific
 
 * :Never :Edit :A :Migration That Has Been Pushed If You Dont Want To Lose Data Or Enrage Other Developers. 
 
+* We Can Also Just Add Code In Migration Files, This Is A Easy Way To See Data For Database Changes. 
 
 
