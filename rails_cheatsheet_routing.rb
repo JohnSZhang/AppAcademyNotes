@@ -10,7 +10,7 @@
 
 * The root to: Command Sets Default Page Of Your Site, Also Very Useful. 
 
-* Often Times Certain Resources Are Children Of Others, In Those Cases They Should Be Nested In Order To Model The Relationship. # Can even specify which controller methods are available in the nest. Otherwise all routes will be generated. 
+* Often Times Certain Resources Are Children Of Others, In Those Cases They Should Be Nested In Order To Model The Relationship. # Can even specify which controller methods are available in the nest (Usually only allow index method and only one level of nesting). Otherwise all routes will be generated. 
 
 * In Order To Have Clean Design, Every Single Representation Of A Resource Should Be Mapped To Only One URL. # For example theres no point in including the parent id if children can and should be found by their own ids.
 
@@ -25,9 +25,9 @@
 
 * Rail Projects Have Master ApplicationControll Which Extends ActionController That All Individual Controllers Subclass From. 
 
-* Paramester Which Are Sent As Part Of Url Are Available In Hash Like Objects In ActionController::Base.Params. Other Posible Souce Of Params Is In The POST/PATCH Body Which Can Also Be Gathered As Body Magically Combines The Two. 
+* Paramester Which Are Sent As Part Of Url Are Available In Hash Like Objects In ActionController::Base.Params (It Is A Method NOT A HASH). Other Posible Souce Of Params Is In The POST/PATCH Body Which Can Also Be Gathered As Body Magically Combines The Two. 
 
-* Mass Assignment, Ie. Create(@params) Would Not Work As We Need To Restrcit Via The .Permit: Method Of Rail Controller. (Whitelist, Else Injections Anyone?) #Another section is the method (get, post, etc) and the :ID Param
+* Mass Assignment, Ie. Create(@params) Would Not Work As We Need To Restrcit Via The :Params.Permit: Method Of Rail Controller. (Whitelist, Else Injections Anyone?) #Another section is the method (get, post, etc) and the :ID Param
 
 * Rail Router Creates The Controller Object Once Routed, Then Calls The Approprite Method On That Controller Object. Once The Controller Does What It Has To Do To Process The Request, Connection Is Closed And Controller Disgarded. 
 
