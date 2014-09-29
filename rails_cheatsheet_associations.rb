@@ -34,6 +34,10 @@
 
 * :has_and_belongs_to_many Association Is Similar To A Has_many Through But Generates The Intermediate Table For You. Useful But Not When We Want Additional Information In Those Intermediate Tables. 
 
+5. Misc
+
+* Delegation Is The Use Of Helper Methods Instead Of Chaining Methods (power_ranger.weapon.fire.power_leve(10) Is A Terrible Thing To Update When You Decide To Change Fire To Shoot One Day). So We Use The :Delegate Keyword And Delegate The Methods Fire And Firepower To Weapon And Use power_ranger.weapon_fire_power_level(10) Instead. 
+
 
 
 
