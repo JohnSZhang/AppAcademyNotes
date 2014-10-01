@@ -13,3 +13,7 @@
 * While We Can Define Foregin Key Constraints On Database Level, It Is Often Easier To Use Relational Call Back To Edit Widowed Records (Ones That Has A Foreign Key With No Valid Point, Btw This Name Is Kind Of Sexist, Cant They Be Rebelious Or Something? ) To Do This We Add :dependent => :destroy Or :dependent => :nullify To Either Destroy Or Set Key To Null.
 
 * Other Cool Callback Methods Inculde :before_validation, :after_create, :after_destroy, Which Does Special Validating/Clean Up Before/After Record Creation And Deletion. #Methods should be protected/private and sometimes take additional arguments to only be triggered one creation instead of every validaiton. 
+
+4. Action Mailer
+
+* 

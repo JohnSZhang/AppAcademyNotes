@@ -39,3 +39,7 @@
 
 * Lots Of Rails Methods Take An Optional :method Parameter That Changes What The URL Does Greatly. 
 
+4. Mailers
+
+* Mails Are Objects Off The ActionMailer::Base Class And Lives In app/mailers. In Email Set Mail To, Subject, Etc. A Mail Is Only Send Once The :deliver Method Is Called. 
+

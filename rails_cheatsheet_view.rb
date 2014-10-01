@@ -26,3 +26,8 @@
 
 * If Values Are Duplicate, Last Value Wins, A Way To Get Around That Is To Use The [] At End Of Name So It Becomes An Array That Gets Added To. #No way to nest an array of hashes, however. 
 
+4. Mailer Views
+
+* Mailer Views Live In app/views/mailer_name, And They Are In The Format Of method_name_html.erb. There Should Also Be A Text Version Of The Email With Same Format In The Directory. Use Erb To Output Things As Usual. 
+
+* Mail Domain Should Be Set In config.action_mails.default_url_option Under Config/Environment Files. Otherwise Use Link Heper Methods As Per Usual. 
