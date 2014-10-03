@@ -31,3 +31,12 @@
 * Mailer Views Live In app/views/mailer_name, And They Are In The Format Of method_name_html.erb. There Should Also Be A Text Version Of The Email With Same Format In The Directory. Use Erb To Output Things As Usual. 
 
 * Mail Domain Should Be Set In config.action_mails.default_url_option Under Config/Environment Files. Otherwise Use Link Heper Methods As Per Usual. 
+
+5. Layout
+
+* Templates Ultimately Combine To Form A Layout. The Default Layout File Sets In app/views/layouts As application.html.erb. It Is Possible To Yield Different Parts Of The Layout Via The conent_for: Method. :Content_for(:header) Will Be Rendered When yield :header Is Called In The Layout. #Asset tags will need to be included individually, which will be covered later. 
+
+* Partial Forms, Which Are Useful For Building Down Giant Template Files Into Smaller, More Digestable Sections As Well As DRYing, Are Saved With _filename Format And Rendered Without The _ (But With Parent Directory Name If From Different Controller Or Section). #Pass local variables to partials via hashes, which raises the variable not found error. Ruby templates also has the "magic"m method of automatically finding template and class name when calling render without passing any additional methods. 
+
+
+
