@@ -14,8 +14,6 @@
 
 * Used To Reuse Code As Well As Preventing Models From Getting Too Bloaded And Chunky. They Can ALso Be Shared Between Models#How is it different from modules?? I dont get it at all. # Also What Is THis ClassMethods stuff?
 
-
-
 4. Polymorphic Associations
 
 * Polymorphic Association Allows Mdoels To Belong To Multiple Models. To Activate Via polymorphic: true, And :has_many :class_name, as: :some_nickname. The Polymorphic Subject Itself Need To Have A Type And An Id. #Shotcuts to t.reference polymorphic: true, but not necessary

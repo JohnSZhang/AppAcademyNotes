@@ -1,4 +1,4 @@
-:Js :Misc
+:Js :Scope
 
 1. Closure
 
@@ -10,4 +10,12 @@
 
 * Variables Not Defined Under A Specific Functional Scope Are Under The :global Scope (Either Global Object In Node Or Window In Browser). Do Not Use Gobal Variables And Always Define Variables #User strict mode to make sure undefined global variables throws an error. 'include strict';
 
+3. Binding
+
+* Because JS Methods That Are Called Without An Object (Even If They Are Defined As An Attribute Of An Object) Will Run Under The :Global Scope And Under Global Object, One Need To :bind The Function To An Object With The Function Objects Special Bind() Method In Order To Set :this Inside The Function Properly. 
+
+* Because Keyword :this Is Never Captured By The Closure Of Inner Functions, It Is Often Good Practice To Create A Variable And Point It To The :this Object So They Can Be Used Later On In The Nested Function. This Variable Is Often Named :that. 
+
+
+ 
 
