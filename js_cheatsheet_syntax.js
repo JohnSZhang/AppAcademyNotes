@@ -19,3 +19,11 @@
 - With Apply : ie functionName.apply(object, [arguments]) It Is Almost Like Calling Function Objects .Bind:() Method While Calling It Regularly. 
 
 - With Call : ie functionName.call(object, arg1, arg2, ...) Very Similar To Apply. 
+
+3. Arguments 
+
+* Javascript Functions Will Happily Take Both More And Less :arguments Than Their Definitions States. If More Functions Are Included They Will Be Available In A Special :arguments Array. If Less Arguments Are Included They Will Be :undefined. 
+
+* Like The :this Keyword, :arguments Is Reset Whenever A New Functinal Scope Is Created. However, :arguments Is Not A True Array And Can Only Be Indexed/.Length On. #we can use array.prototype.slice to make an array copy though. 
+
+
