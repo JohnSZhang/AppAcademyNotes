@@ -65,9 +65,13 @@
 
 * "Shift + Control + ." Create ERB Tag
 
-* "Shift + Control + ," Create Html Tags (AutoCompletes, Default With P)
+* "Shift + Control + w" Create Html Tags (AutoCompletes, Default With P)
 
 * "Shift + Enter" Create New Method #userful
+
+* "input/form/ + tab" Create A New HTML Element Of Type, Tab Through To Go Through The Important Bits
+
+* "f/fun/proto + tab" Creates New JavaScript Loops, Tab Through To Edit 
 
 7. Working With Macros
 

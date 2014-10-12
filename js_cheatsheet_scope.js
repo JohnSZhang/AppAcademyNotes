@@ -4,7 +4,7 @@
 
 * To Understand Javascript Closure We Need To Understand JS Scope, In Js, Scope (Ie The Variables That Any Location The Code Has Access To) Includes The Local Variables Defined In The Current Function, Any Arguments Passed In, And Any Other Variables That Were Declared When The Function Is Defined.
 
-* These "Free Variables" Can Be :captured In Their References (They Will Not Be Garbage Collected If So) And We Call The Function Which Captures Free Variables A :Closure.
+* These "Free Variables" Can Be :captured In Their References (They Will Not Be Garbage Collected If So) And We Call The Function Which Captures Free Variables A :Closure. The Only Varibles Not Captured By Closures Are :this And :arguments.
 
 2. Global Scope
 
@@ -17,5 +17,4 @@
 * Because Keyword :this Is Never Captured By The Closure Of Inner Functions, It Is Often Good Practice To Create A Variable And Point It To The :this Object So They Can Be Used Later On In The Nested Function. This Variable Is Often Named :that. 
 
 
- 
 

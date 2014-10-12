@@ -37,7 +37,9 @@
 
 5. Meta Symbols
 
-* ? Symbol Matches For Optional Search Of Previous Character, Saying op?q Matches Both opq And oq
+* ? Symbol Matches For Optional Search Of Previous Character, Saying op?q Matches Both opq And oq 
+
+* Can Use (?: ... ) To Define A NonCapturing Group, Which Mathces But Does Not Capture
 
 * Use ^ Outside Of Brackets Will Match Beginning Of Line, And $ Will Match End Of Line
 
@@ -45,7 +47,7 @@
 
 6. Capturing
 
-* Use () To Capture Texts Matched Within. These Could Be Nested To Capture More Than One Thing From The Same Line. 
+* Use () To Capture Texts Matched Within. These Could Be Nested To Capture More Than One Thing From The Same Line.
 
 * Similarly, Use (.*) To Capture Them All
 
