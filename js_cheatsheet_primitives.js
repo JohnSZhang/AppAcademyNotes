@@ -6,6 +6,8 @@
 
 * Because Javascript Is Dynamically Typed, Types Are Converted When Methods Take Incompatible Arguments. # Is is always a good idea to use === whenever evaluating equality of two objects, as this does not force conversion of variable types and cause weird issues. 
 
+* Primatives All Have Wrapper Methods So They Can Use Some Prototype Methods Such As "hulk smash".toUpperCase. To Set Their Properties Have No Lasting Effects, However. 
+
 2. Numbers
 
 * JavaScripts Numbers Are ALL 64-bit Floats. No Separate Integer Type. NaN Results From Operation Which Cannot Produce Number As A Result, It Is Not Equal To Any Number(Including Itself So Use NaN !== NaN To Test) #Integers up to 53 bits are okay under this 64bit scheme of doubles. Best practice is to always convert to ints then convert back. You lose the extra 11 bits of data as tradeoff. Bitwise operators are done in 32 bit signed intergers.

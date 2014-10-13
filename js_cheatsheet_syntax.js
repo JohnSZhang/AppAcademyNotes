@@ -18,15 +18,20 @@
 
 - With Apply : ie functionName.apply(object, [arguments]) It Is Almost Like Calling Function Objects .Bind:() Method While Calling It Regularly. 
 
-- With Call : ie functionName.call(object, arg1, arg2, ...) Very Similar To Apply. 
+- With Call : ie functionName.call(object, arg1, arg2, ...) Very Similar To Apply. It Is Often A Good Idea To First Implement A Apply Version Then Simply Wrap A Call Version Around It. 
  
 * Functions Are First Class Objects In That They Are Objects And Have Hidden Properties (Linked To Function.prototype Then To Object.prototype). They Are Also Created With 2 Hidden Properties Which Are Its Context (For Closure) And The Actual Code To Implement Behavior. Every Function Also Has A :prototype Property Which Is An Object With A Constructor Property Whose Value Is The Function. (So Kind Of Like A Singleton Object.) For This Reason Functions Can Also Have Methods. 
+
+* Because Js Functions Are First Class Objects, We Can Create Higher Order Functions, Ones Which Takes A Function As An Argument And/Or Returns Another Function. Like A Function Of Funtions. 
+
+* Named Function Declaration ie. function Fun() {} Is Scoped Under The Current Local Scope, Similarly To Variable Declartion. (It Is Better, However, To Name It Something Else Inside The Functional Scope.) # It is also a much better practice to declare vars then assign them conditionally than to assign them conditionally willy nilly. 
+
 
 3. Arguments 
 
 * Javascript Functions Will Happily Take Both More And Less :arguments Than Their Definitions States. If More Functions Are Included They Will Be Available In A Special :arguments Array. If Less Arguments Are Included They Will Be :undefined. 
 
-* Like The :this Keyword, :arguments Is Reset Whenever A New Functinal Scope Is Created. However, :arguments Is Not A True Array And Can Only Be Indexed/.Length On. #we can use array.prototype.slice to make an array copy though. 
+* Like The :this Keyword, :arguments Is Reset Whenever A New Functinal Scope Is Created. However, :arguments Is Not A True Array And Can Only Be Indexed/.Length On. #we can use [].slice.call(arguments) to make an array copy though. Also never modify this arguments array directly as terrible things can happen. 
 
 4. Special Things To Note
 
@@ -62,5 +67,6 @@
     ?:
     Typeof Thinks Array And Nulls Are Objects. (Its Stupid)
     
+* SemiColon Injection Can Happen : Before } Token, After \n Or At End Of Input. They Only Happen When The Next Line Cannot Be Parsed, So It Is Super Dangerous To Leave Them Out When Next Character Is ( , [ , + , - , or /  . Also Note Semicolons Are Not Automatically Injeted For Empty Loop Bodies Or In For Loop Head. 
 
 

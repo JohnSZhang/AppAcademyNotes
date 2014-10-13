@@ -2,7 +2,7 @@
 
 1. Callbacks
 
-* :Callbacks Are Functions Which Are Passed Into Another Function And Are Intended To Be Called Back At A Later Point. #Usually because the reults will not be available until later on in the pt. 
+* :Callbacks Are Functions Which Are Passed Into Another Function And Are Intended To Be Called Back At A Later Point. This Is Usually Because The Results Will Not Be Available Until Later On In Case Of Asynchronous Functions, But Can Also Be In Case Of Functions Like Map Or Each (Higher Order Functions). 
 
 2. Asynchronous Functions
 
@@ -25,3 +25,12 @@
 7. Implicit Conversion
 
 * + - / * Tries To Coerce Arguments Into Numbers Before Calculation. Except For + Which Also Works For Strings And Therefore Strings Takes Priority. 1 + "2" + 3 = "123"
+
+8. Eval
+
+* Always Looks At Eval Inside Of A Function And See If It Produces Variables Which A: Are Global Variables And B: Might Pollute Callers Scope. Avoid Doing Either By Wrapping Eval Inside An Anonmyous Function. 
+
+* Eval Can Be Treated Differently, One Where It Is Involved Directly In A Function Is A Direct Call And Considered Local, While One WHere Eval Is Bind To A Variable Is Indrect And Eval Has Access To Global Scope (Or Do A (0,eval)). 
+
+
+
