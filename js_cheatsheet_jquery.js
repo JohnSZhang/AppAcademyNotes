@@ -56,4 +56,10 @@
 
 * JQuery Has Lots Of Cool Effects That Works With Most Elements, Such As :fadeIn(), :fadeOut(), :show(), :hide(), :fadeOut(), :slideUp(), :slideDown(), :slideToggle(), You Can Even Define Your Own With :animate() And Use :stop(), :delay() To Spice Things Up!
 
+11. AJAX
 
+* While AJAX (Asynchronous Javascript And XML) Is Not Techincally A JQuery Only Thing, Jquerys :ajax Method Allow Us To Make Ajax Requests Easily Ove Different Browser Types. The Method Take Either A Configuration Object Or An URL And An Optional Configuration Object. 
+
+* The Configuration Object For Ajax Can Containt The Properties Of {url: , type: , data: , dataType: , success: , error: }. The Response Of The Request Will Be Passed On To The Success/Failure Callback Functions.(Can Also Chain A :then() With Success/Error Function Names To Do This) Because It Is Asynchoronus, It Will Return Before The Request Is Complete, It Is Not A Good Idea To Use The Resp Object Before We Are Sure It Is Returned. 
+
+* If We Do Not Call About Responses We Can Use Shortcut Methods Like :get() And :post().Likewise, We Can Set A Method To Be Called At A Later Time With The :deferred() Methods And Then Follow Its Resolution With A :poper() Or :when(), When Lets You Mix Sync And Async Operations As It Waits For More Than One Possible Async To Finish Running Before Passing Their Return Values Into Call Back Functions. 

@@ -32,5 +32,9 @@
 
 * Eval Can Be Treated Differently, One Where It Is Involved Directly In A Function Is A Direct Call And Considered Local, While One WHere Eval Is Bind To A Variable Is Indrect And Eval Has Access To Global Scope (Or Do A (0,eval)). 
 
+9. Object Best Practices
+
+* It Is Often A Good Idea To Make Your Constructor Functions new-agotic By Calling Itself With The new Keyword Unless :this Is An Instance Of Itself. This Is Mainly To Avoid Polluting Global Namespace With Your Objects Properties.
+
 
 
