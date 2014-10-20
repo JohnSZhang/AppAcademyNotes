@@ -14,3 +14,4 @@
 
 * The :create() Method Is Used To Create A New Instance Of Model And Add It To Collection. It Takes An Object With The New Objects Properties As Argument. 
 
+* There Are 3 Types Of Comparators That Can Be Used To Keep Models In Order, Either sortBy(functionToSort) This One Returns String Or Number Values, sort(functionWithTwoArguments) This One Is Like <=>, attribute(attributeStringToSort)

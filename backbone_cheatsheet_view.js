@@ -19,3 +19,5 @@
 3. Best Practices 
 
 * Views Should Not Be Used To Redraw Entire Pages, Instead Only Whenever The Related View Data CHanges Should That Section Of The Site Be Rerendered. 
+
+* Sometimes We Would Like To Call Render On A Collections Individual Views Instead Of The Parent Elements View Instead Of Handing It Off To Be More Efficient. 

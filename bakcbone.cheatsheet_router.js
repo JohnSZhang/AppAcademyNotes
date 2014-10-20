@@ -10,3 +10,7 @@
 
 * Backbone.history.start() Should Be Called Upon App Initialization To Ensure The Router Is Created/Initialized. The Routers Properties Can Each Be A Function That Matches The Event String Called When The Matching Routes Url Is Called. 
 
+* Views In DOM Which Have Listeners Attached Will Not Be Garbage Collected Even If Their Elements Are Removed. Because Of This, We Called :remove() On The View So It Will Call Its :stopListening() Method. We Also Would Some Times Like To Create A SwapView Function Which Does This Automatically. 
+
+
+
