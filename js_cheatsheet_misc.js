@@ -36,5 +36,12 @@
 
 * It Is Often A Good Idea To Make Your Constructor Functions new-agotic By Calling Itself With The new Keyword Unless :this Is An Instance Of Itself. This Is Mainly To Avoid Polluting Global Namespace With Your Objects Properties.
 
+10. Best Practices For API Writing
 
+* Convention Is Key, The Less Time Spent Looking Up Docs Because Function Fingerprint Silliness Or Bad Names, The More Work Gets Done. 
 
+* Undefined Is Not The Same As No Value, Use More Descriptive Language Than :null Or :undefined As Function Arguments. Do Not Use === :undefined (Use || Or typeof Instead, Especially Cases When 0, "", Undefined Might Be Alowed. 
+
+* Use Option Hash Wheneve There Are More Than 2 Arguments For A Function. Use Merge To Merge Options With Default When Working With Option Defaults
+
+* Keep Your Library Stateless Whenever Possible. States Are Harder To Keep Track Of, Takes Longer To Learn And Debug, And Is A Lot Less Modular While Being More Fragile. 
