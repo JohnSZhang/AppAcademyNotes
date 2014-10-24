@@ -21,3 +21,7 @@
 * Views Should Not Be Used To Redraw Entire Pages, Instead Only Whenever The Related View Data CHanges Should That Section Of The Site Be Rerendered. 
 
 * Sometimes We Would Like To Call Render On A Collections Individual Views Instead Of The Parent Elements View Instead Of Handing It Off To Be More Efficient. 
+
+* It Is Also Often A Good Idea To Define A Custom :leave() Function On Views So They Can Remove Views Recursively As Remove Does Not Do A Recursive Remove On Child Views. 
+
+* Views this.$(selector_text) Is A Shortcut For this.$el.find(selector_text), Which Is Nice. 

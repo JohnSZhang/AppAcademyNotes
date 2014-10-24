@@ -28,6 +28,8 @@
 
 * Other Useful Global Array Methods Include :slice(), :push(), :pop(), :shift(), :unshift() :sort(). :splice() Is Special In That It Allows For Both Removal And Insertion, Syntax Is :splice(Start, DeleteCount, New Item).
 
+* Some Useful ES5 Javascript Functions Include :map() Which Maps Array Elements To A Function And :filter() Which Takes Function And Only Return Elements That Are True. Otherwise, :some() And :every() Returns True/False Based On Whether Every Element In The Array Passes Some Function Calledbacked To The Array.  
+
 5. Regex
 
 * Regex Can Be Created Via Regex Literal // Followed By Options g i m Or Via new Regex(). :g Stands For Global Match, :i For Case Insensitive, And :m FOr Multitime. 
