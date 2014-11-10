@@ -24,9 +24,9 @@
 
 * Key Files Include The 'http' Library Which Has The :createServer Method That Takes A Function With Arguments For Request And Response, And The :listen Function That Tells The Server Which Port To Listen To. (It Is That Easy)
 
-* A More Explicit Way Of Thinking About The :createServer Function Is To Think Of It As An Object As Add :on(request, callback(request, response)). And Tell It To :listen Explicitly.
+* A More Explicit Way Of Thinking About The :createServer Function Is To Think Of It As An Object As Add :on(request, callback(request, response)). And Tell It To :listen Explicitly, :listen Is Needed To Actually Start The Server, Else It Just Lives In Memory And Doesnt Do Anything. 
 
-* Some Key Functionalities Of The Server Object Is Its Ability To :writeHeader (200, {'Content-Type': 'text/html'}), :write To Actually Write The Message, And :end To Send The Request (It Doesnt Automatically Send Otherwise)
+* Some Key Functionalities Of The Server Object Is Its Ability To :writeHeader (200, {'Content-Type': 'text/html'}), :write To Actually Write The Message, And :end To Send The Request (It Doesnt Automatically Send Otherwise, Though We Can Add The Content As An Argument To The end() To Save Some Space).
 
 * Aother Useful Library Is The 'fs' Library, It Handes Crucial Functions Such As :readFile.
 
@@ -37,3 +37,5 @@
 * The Main Writing Steam We Have Is The :response Object, Instead Of Ending It To Finish A Request We Can Creating A Read Stream Then :pipe() To The Response Object, This Is Useful For Loading Large Files.
 
 6. Path Library
+
+* The Path Library Is Our Mainway Of Going Through File Directory In Node, :path.basename Gives Us The Current Directory Of The Node.js Server File.

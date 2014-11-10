@@ -8,6 +8,8 @@
 
 2. MIME
 
+* The MIME Library Is Very Helpful When We Need To Server Up Static Resources And Do Not Know What These Files Response Content Type Should Be. It Automatically Figures It Out(Simply Use :mime.lookup(file). This Way, Css Are Css Files And Javascripts Are Correctly Tagged With Type="Text/Javascript"
+
 3. Caching
 
-* Because Caching Data In RAM Is Much Faster Than Accessing Data File Disk (Read/Write IO Are Expensive), It Is Good Practice To Have A Cache Variable And Serve From The Variable Whenever Possible. 
+* Because Caching Data In RAM Is Much Faster Than Accessing Data File Disk (Read/Write IO Are Expensive), It Is Good Practice To Have A Cache Variable And Serve From The Variable Whenever Possible.
