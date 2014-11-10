@@ -10,6 +10,8 @@
 
 * :method_messing() Handles How Methods Not Defined Will Function, The Method Name Of The Method Will Be Passed In As The First Argument Of The *args Array.
 
+* Similar To Method Missing, One Can Use :class_eval (string or <<- Block) To Add Additional Boilerplating Methods To Ruby. 
+
 3. Type Introspection
 
 * Use :class, :is_a?, :superclass, :kind_of? Methods To Find Out More About The Attribute Of Object You Wrok With. 
@@ -25,3 +27,4 @@
 5. Global Variables
 
 * $ Sign Denotes A Global Variable, These Are Permanent And Can Not Be Overriden. They Should Almost Never Used, Unless Its Globals Like $stdin And $stdout. #Other wise it's not OOP To use global variables. 
+
