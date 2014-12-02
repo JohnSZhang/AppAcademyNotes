@@ -40,4 +40,14 @@ Chapter One Point One
 
 7. Newtons Method
 
-*
+* Newtons method is a clear example of using a recursive solution to solve a other wise iterative problem. the good_enough? function is presented as our base case, and the sqrt_iter method is the recursive engine that drives the solution
+
+8. Procedures As Black Box
+
+* the beauty of the square root problem is how it is broken into smaller subproblems. this breaking down of a problem allows us to treat each function/procedure as a :black :box, aka so we can disregard its inner workings. this is called procedure abstraction, similar to the idea of a single principle rule for classes in that there should only be one purpose for a class.
+
+* furthermore, each procedure must have its variables value to be :local within that function, so we can reuse variable names and swap them out in the future. the procedures :formal :parameter is the variable that it takes and does not matter what the actualy name is, and it will have the body of the procedure as its :scope. such a variable is called a :bound :variable, it doesnt matter what its name actually is. and the set of expressions where the variable name is :bound to the value is called the variables :scope.
+
+* if we name a :formal :parameter to be the same name as a :free variable to be used at a later time, (calling a variable abs when abs is later used as a function), then we have :captured the varible abs and the function will no longer work.
+
+* variable is within :scope anytime inside a procedure declaration (also called a :block :structure), so we can often skip that variable as an input to sub procedures. this is called :lexical :scoping, ie the same variable name has the same value throughout the entire block. 
