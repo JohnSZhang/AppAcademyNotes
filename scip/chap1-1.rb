@@ -1,4 +1,4 @@
-Chapter One Point One
+Chapter One - One
 
 * Elements Of Programing
 
@@ -50,4 +50,4 @@ Chapter One Point One
 
 * if we name a :formal :parameter to be the same name as a :free variable to be used at a later time, (calling a variable abs when abs is later used as a function), then we have :captured the varible abs and the function will no longer work.
 
-* variable is within :scope anytime inside a procedure declaration (also called a :block :structure), so we can often skip that variable as an input to sub procedures. this is called :lexical :scoping, ie the same variable name has the same value throughout the entire block. 
+* variable is within :scope anytime inside a procedure declaration (also called a :block :structure), so we can often skip that variable as an input to sub procedures. this is called :lexical :scoping, ie the same variable name has the same value throughout the entire block.
