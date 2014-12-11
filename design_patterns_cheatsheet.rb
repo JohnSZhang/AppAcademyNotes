@@ -4,7 +4,7 @@
 
 - they separate out the things that change from those that stays the same, the program an interface instead of an implementation, they prefer composition over inheritance and they delegate.
 
-- separateion: using design patterns, we can anticipate changes to the codebase and when future changes do occur, we can change only those parts that we already know are changing, keeping the damage as small and contained as possible.
+- separateion: (serparateion of concerns) using design patterns, we can anticipate changes to the codebase and when future changes do occur, we can change only those parts that we already know are changing, keeping the damage as small and contained as possible.
 
 - interface: over: implementation: with our ability to anticipate change, we can program an interface and skip checks to see if objects are of a particular type. ie. all vehicles travel. this reduces coupling as classes no longer need to know what each other does/is
 
@@ -60,6 +60,48 @@
 
 2. what is it : there are two types of iterators, External and Internal Iterators. the external ones are separate objects which we can then use to controll the flow of the elements through whatever code we want to run on them, and not call next until we are done processing the current one while the internal iterators simply loops through each element as quickly as possible (especially dangerous in multithreaded environment), all are suceptible to self mutating blocks of code.
 
-3. examples : 
+3. examples : iterators are everywhere in ruby, mostly internal to help us work with hashes, arrays, file IO, and many many more. it is also useful when we wish to loop through many different arrays that an object might contain (looking back probably should use it for asteroid-maybes moving objects arrays)
 
 4. enumerables: rubys enumerable module is great to be mixed into any of your own code (it is how string and arrays share similar methods). one must first declar the <=> operator for the underlying comparisons, followed by an :each method implementation for the aggrategor method, and then a number of useful helpers such as all?, include?, and any? are provided by the mixin.
+
+5. ObjectSpace: rubys way to keep track of all objects currently available in a ruby interpreter. can iterate through all of them with ObjectSpaces :each_object method that takes a class as an argument and allows us to only run blocks on existing objects of that particular class. very powerful for metaprogramming and inspection.
+
+* Commands
+
+1. when to use it : when you have some collection of actions that needs to be run more than once, and should be stored for future use though not caring about the actual state of the objects the procedures are running on.
+
+2. what is it : Commands are objects which knows one or a series of methods which needs to be run periodically or based off some end user triggers. these actions should be very specific and for the most part context independent (ie it should know which file to delete but cares not what size the files are). it is often a very good practice to keep track of a list of commands to be run in a bundle as well as a list of past commands ran (including their affected state snapshots) so we can easily undo/redo actions in a chain like manner. this usually mean for every execute method theres a corresponding unexecute method, and it is good to create a Composite of commands so we can run them without knowing what the underlying unit commands are.
+
+3. examples : rails migration files are some fine examples of this pattern, each migration file is really just a command that we can do/undo/redo at will as long as we define the up/down methods. others include periodic commands to wipe cache, clean db tables and installing programs.
+
+* Adapters
+
+1. when to use it : when you wish objects to send messages to each other yet the format of the messages are slightly different, so instead of rewriting the class using the message for a switch statement (causes a lot of grief and boilerplating) we need something more elegant.
+
+2. what is it : a separate class of Adapters that takes one object and translates its messages to a format that is useable by a different class of objects, one which requires the correct format. it acts very much like a hardware adapter that changes 4 pins into a 3 pin plug but preserving the overall messages. it essentially creates a useable interface to an otherwise not compatible class of objects. it is also possible to monkey patch the adaptee class to achieve the same thing, but sometimes that is unwise as changing a complex or not well understood class on the fly might have unseen consequences.
+
+3. examples : the activerecord adapters that are used by rails to connect to different types of databases. while the underlying sql code and database connection ideas are the same, the actual syntax are often different and we can use different adapters (all subclasses of the AbstractAdapter) to connect to the different types of databases.
+
+* Proxy
+
+1. when to use it : when we want to create a double of another object for reasons like security, location, or performance/lazy evaluation. what if we do not want unauthorized users to access an object, a person in a different locationt to access the object or not create the actual object (and take the corresponding performance hit) until it is absolutely necessary.
+
+2. what is it : Proxy objects are objects which holds a reference to the underlying real subject and acts like a midderman between the user of the proxy and the subject. it passes messages via the same interfaces (barring security checks, etc) and receives/displays those messages without doing any actual work. a great way to create a Proxy object is to adopt rubys method_missing: method and pass those methods directly to the @subject object. this saves lots of boilerplating. we can also override the :subject method to only create it when its absolutely needed, and not at the initializing level of the Proxy object. the authorizing proxy is called a Protection Proxy, the stand-in proxy is the Remote Proxy, and the proxy which does not have a subject until absolutely necessary is the Virtual Proxy.
+
+3. examples : proxies are mostly used when creating proxy servers that while behaves like their underlying subject, do not actually generate the server codes. they instead pass those method calls to the real server and passes back server replies.
+
+* Decorators
+
+1. when to use it : what happens when you want to add additional but varied functionalities to a class, and have the ability to mix and match them at will? different subclasses via template and strategy would be out as the numbers grow exponential to the number of possible combinations. and of course a massive object with all the methods is out as once again we need all the mix match possibilities mapped out.
+
+2. what is it : Decorators are additional classes that adds things on top of existing class, using the same interface but adding little pices of additional processing to the output so that one can mix/match and choose whichever one needs. we can do this either by adding additional modules or create dedicated classes, althoug modules are not possible to un-extend once extended. with this pattern we need a Component that both ConcreteComponent and Decorators inherit from, with Concrete Component handling the actual procedures and the Decorators having a reference to another Component and adding those additional funcionalities.
+
+3. examples : activesupports :alias_method_chain allows us to swap in different methods names and create a long chain of method called all with the same name.
+
+* Singleton
+
+1 when to use it :
+
+2. what is it :
+
+3. examples : 
