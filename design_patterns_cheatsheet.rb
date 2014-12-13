@@ -100,8 +100,24 @@
 
 * Singleton
 
-1 when to use it :
+1 when to use it : when there is something that you know should only have one instance of, say a database connection. we know there should only be one unique version of it so a class doesnt make much sense.
 
-2. what is it :
+2. what is it : like the name suggests, Singletons are a class of objects where there is only one instance of the actual object. usually fetched/created by the class.instance method. we can use a global variable (not a great idea), hide the initialize method or use class variables (making the class and/or the module a singleton) however, we need to be aware that the Singleton should only be there for reasons of there being only an unique instance of the object, and try to limit other classes knowledge of the singleton as much as possible.
 
-3. examples : 
+3. examples : database connections thats used system wide by the various parts, as well as activerecods reflection dicitonary class are classic examples of the singleton. after all, there are and should only be one of them.
+
+* Factory
+
+1. when to use it : when you want to create objects of different kind depending on the circumstances, kind of like the template pattern, but instead of end procedures you want to receive end objects.
+
+2. what is it : the Factory pattern is the application of the template pattern on to objects instead of methods. you will start with a basic Creator class that builds a generic object, then different subclasses of Concrete Factories that builds particular types of different objects (the Products). a more efficient way of creating Factories is the Parameterize Factory Method that takes as its initializer name of the classes to be built, this way we can get rid of different subclasses of the factories and create dynamic ones at will. Abstract Factories is an attempt to curtail this overly dynamic nature of the parameterize factory that limits the combination of classes that one can create in a factory, like a receipe book for compatible products.
+
+3. examples : ruby generally uses a more dynamic version that uses metaprogramming to know what the correct class name should be. though we can see in the activerecord adopter some uses of taking in string arguments, concatnate with method partials then calling the right connections, this is similar to a parameterize factory.
+
+* Builder
+
+1. when to use it : when you have a really complex object that cannot be built in go one (or you choose not to depending on the configuration). with so many moving parts it will be ugly to write a single initilizing method.
+
+2. what is it : the Builder is an object reponsible for creating and returning another object of a particular class. yet the Builder object breaks down the overall construction into many smaller configurable and managable parts so one can configure them as one wish and step by step. this is especially powerful with the ruby :method_missing as one can parse out those ad hoc method names and build them on the fly.
+
+3. examples : the mail factory gem in rails, building an email message by taking its individual parts, parse them out and put them back together before the message is actually sent. the activerecord library also heavily uses the method_missing for its magical finds. 
