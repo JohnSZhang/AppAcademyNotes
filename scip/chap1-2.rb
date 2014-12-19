@@ -53,3 +53,13 @@ which takes a linear time but constant space. however, by breaking the number do
     (else (* b (fast-expt b (- n 1))))))
 
 and result in a log(n) speed calculation. this becomes much much faster as the number of n grows.
+
+5. Greatest Common Divisors
+
+* using euclids algorithm, we can reduce the greatest common divisor of numbers a, and b by successively reducing the smaller number by the the remainder r of a and b until we are reduced to a pair where the second number is 0. the other number will be the greatest common divisor of a and b. this algorthim has a log growth with respect to a and b. lames theorem therefore states that if it requires k steps to compute the gcd via this method, then the smaller number must be greater than or equal to the kth fibonacci number.
+
+6. Testing For Primality
+
+* one way to test if a number if a prime number is by successively increasing divisors, from 2 to the square root of n, and if no number divides evenly then n is a prime number. this method grows with the sqrt of n.
+
+* the fermat test of primarlity is based off fermats little theorem, that if n is a prime number and a is any positive integer less than n, then a raised to the nth power is congurent to a mod n. the probablistic method follows the therom takes n random numbers between 1 and n - 1, raise them to the nth power and calculate its mod v n and see if that is the same as a mod n. as we increase the numbers we test we are more and more sure that n is a prime number. the a to the nth power calculation can be done in log n steps, so this method grows approximately via log of n. this is a stype of probablistic test that can be repeated until a sufficiently secure probability is reached for us to be confident. 
