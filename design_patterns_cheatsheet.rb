@@ -120,4 +120,12 @@
 
 2. what is it : the Builder is an object reponsible for creating and returning another object of a particular class. yet the Builder object breaks down the overall construction into many smaller configurable and managable parts so one can configure them as one wish and step by step. this is especially powerful with the ruby :method_missing as one can parse out those ad hoc method names and build them on the fly.
 
-3. examples : the mail factory gem in rails, building an email message by taking its individual parts, parse them out and put them back together before the message is actually sent. the activerecord library also heavily uses the method_missing for its magical finds. 
+3. examples : the mail factory gem in rails, building an email message by taking its individual parts, parse them out and put them back together before the message is actually sent. the activerecord library also heavily uses the method_missing for its magical finds.
+
+* Interpreter
+
+1. when to use it : when you have a series of complex problems that can be brokem down into chunks of expressions, then pieced together like lego blocks to create something new and powerful.
+
+2. what is it : :interpreter pattern is the declaration of a user defined language that abstrats away more complex problems into another specialized language, made up of terminal and nonterminal expressions that are then interpreted with the currect :context and used to generate the correct end result. this usually involves the program breaking code down into an :abstract :syntax :tree, which is then translated into the underlying code.
+
+3. examples : ruby itself is an interpreted language, so is html and sql. think about the example of the vector utility class, that is some what of an interpreter (though with objects rather than text) without a parser. or sql, that interprets text and translate it into database level language and queries. 
