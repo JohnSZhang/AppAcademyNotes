@@ -128,4 +128,6 @@
 
 2. what is it : :interpreter pattern is the declaration of a user defined language that abstrats away more complex problems into another specialized language, made up of terminal and nonterminal expressions that are then interpreted with the currect :context and used to generate the correct end result. this usually involves the program breaking code down into an :abstract :syntax :tree, which is then translated into the underlying code.
 
-3. examples : ruby itself is an interpreted language, so is html and sql. think about the example of the vector utility class, that is some what of an interpreter (though with objects rather than text) without a parser. or sql, that interprets text and translate it into database level language and queries. 
+3. examples : ruby itself is an interpreted language, so is html and sql. think about the example of the vector utility class, that is some what of an interpreter (though with objects rather than text) without a parser. or sql, that interprets text and translate it into database level language and queries.
+
+* Domain Specific Languages
