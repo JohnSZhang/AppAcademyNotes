@@ -131,3 +131,9 @@
 3. examples : ruby itself is an interpreted language, so is html and sql. think about the example of the vector utility class, that is some what of an interpreter (though with objects rather than text) without a parser. or sql, that interprets text and translate it into database level language and queries.
 
 * Domain Specific Languages
+
+1. when to use it : similar to the interpreter design pattern, :DSL should be used when a problem is better solved via a series of chunky, easy to digest expression which can then be pieced together to create lego like programs. the main difference between the two is that :DSL is often written for end users that do not know how to program and it leverages rubys easy to use (or abuse) syntax to create intuitive command files.
+
+2. what is it : like an interpreter, but instead of using an abstract syntax tree we instead take advantage of rubys ability to eval strings of texts as source files and call methods easily without params. in general we want to have a :data :structure of the underlying entites that we wish to process as well as some top level entity that reads the user text and process it into the underlying data objects.
+
+3. examples : rails uses :DSL in its active record class, think the many belongs_to, the has_many, the create_tables. the rake utility program is another one that allows one to eaily create tasks to be used and shared by others.
